@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toast</title>
+</head>
+
+<body style="margin:0; font-family: Arial, sans-serif;">
+
+  <h1 style="color: olive; text-align: center; font-size: clamp(20px, 5vw, 34px); margin: 20px 0;">
+    Toast with javaScript
+  </h1>
+
+  <!-- TOP BOX -->
+  <div class="box1" style="
+      border: 2px solid green;
+      width: 100%;
+      height: 300px;
+      background-color: green;
+      border-bottom-left-radius: clamp(60px, 12vw, 200px);
+      border-bottom-right-radius: clamp(60px, 12vw, 200px);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  ">
+
+    <!-- Toast -->
+    <div class="toast" style="
+        border: 2px solid yellowgreen;
+        padding: clamp(12px, 2vw, 30px);
+        background-color: yellowgreen;
+        border-radius: 10px;
+        font-size: clamp(14px, 3vw, 20px);
+        text-align: center;
+
+        width: min(85%, 420px);
+        box-sizing: border-box;
+
+        /* ✅ animation */
+        opacity: 1;
+        transform: translateY(20px);
+        visibility: hidden;
+        transition: all 0.5s ease;
+    ">
+      Hi I'M Toast Section
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BOX -->
+  <div class="box1" style="
+      border: 2px solid rgb(0, 122, 128);
+      width: 100%;
+      height: 300px;
+      background-color: rgb(0, 122, 128);
+      border-top-left-radius: clamp(60px, 12vw, 200px);
+      border-top-right-radius: clamp(60px, 12vw, 200px);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  ">
+
+    <!-- Button -->
+    <button style="
+        background-color: black;
+        color: white;
+        padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 28px);
+        border: none;
+        font-size: clamp(14px, 4vw, 20px);
+        border-radius: 10px;
+
+        width: min(70%, 220px);
+        cursor: pointer;
+    " onclick="popup()">
+      Click
+    </button>
+
+  </div>
+
+  <script>
+    function popup() {
+      const toast = document.getElementsByClassName("toast")[0];
+
+      // show toast
+        toast.style.visibility = "visible";
+        toast.style.opacity = "1";
+        toast.style.transform = "translateY(0px)";
+
+      // hide after 2 seconds
+          setTimeout(() => {
+          toast.style.opacity = "0";
+          toast.style.transform = "translateY(20px)";
+        }, 2000);
+        
+    }
+  </script>
+
+</body>
+</html>
