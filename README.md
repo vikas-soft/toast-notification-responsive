@@ -1,8 +1,6 @@
 # toast-notification-responsive
 Responsive toast notification using HTML, CSS and JavaScript with smooth fade + slide animation and auto hide feature.
 
-# Toast Notification (HTML + JavaScript)
-
 A simple **responsive toast notification** project using **HTML + JavaScript**.  
 Toast appears on button click with **smooth fade + slide effect** and hides automatically after **2 seconds**.
 
